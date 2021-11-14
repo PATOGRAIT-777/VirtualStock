@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>VirtualStock </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/divs.css" type="text/css">
+        <link rel="stylesheet" href="css/letras.css" type="text/css">
+        <link rel="stylesheet" href="css/imagExtras.css" type="text/css">
+        
+        <script language="JavaScript" type="text/JavaScript">
+        function MM_jumpMenu(targ,selObj,restore){ //v3.0
+          eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+          if (restore) selObj.selectedIndex=0;
+        }
+
+        function abrir_popup(pagina) {
+                top.fill.location.href = pagina
+        }
+        </script>
+        
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	
+        <script>
+			$(function(){
+		       $('#login').click(function(){
+			   $(this).next('#login-content').slideToggle();
+			   $(this).toggleClass('active');          
+			   });
+			});
+	</script>
+        
+    </head>
+    <body>
+       <div class="encabezado">
+           <img class="temp" src="img/buttons/logoDTienda.png" alt="regalo">&nbsp;&nbsp;&nbsp;
+            
+           <select class="product" onchange="MM_jumpMenu('parent.fill',this,0)">
+                <option class="backSoul">Comida</option> 
+                <option class="backSoul">Frutas y Verduras</option> 
+                <option class="backSoul">Lacteos</option> 
+                <option class="backSoul">Harinas</option> 
+                <option class="backSoul">Alimentos Preparados</option> 
+                <option class="backSoul">Carnes y Embutidos</option> 
+                <option class="backSoul">Enlatados</option>
+                <option class="backSoul">Otros</option>
+                </select>
+           
+           <select class="product" onchange="MM_jumpMenu('parent.fill',this,0)">
+                <option class="backSoul">Lacteos</option> 
+                <option class="backSoul">Refrescos</option> 
+                <option class="backSoul">Bebidas</option>   
+                <option class="backSoul">Bebidas Alcoholicas</option> 
+                <option class="backSoul">Otros</option>
+                </select>
+           
+           <select class="product" onchange="MM_jumpMenu('parent.fill',this,0)">
+                <option class="backSoul">Automedicacion</option> 
+                <option class="backSoul">Higiene</option> 
+                <option class="backSoul">Uso Domestico</option> 
+                <option class="backSoul">Jarceria</option> 
+                <option class="backSoul">Productos de Limpieza</option> 
+                <option class="backSoul">Otros</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                <option class="backSoul">Wenas noches</option> 
+                </select>
+           
+           <a href="formulario.html" class="product" target="fill">Registro</a>&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="statement.jsp" class="product" target="fill">test</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="inSes">
+                
+                <nav class="acceder">
+                    <a id="login" href="#">&nbsp;&nbsp;Acceder&nbsp;&nbsp;</a>
+		        <div id="login-content">
+		            <form action="valUsr.jsp" method="POST" name="inSes">
+				<input id="user" type="email" name="Email" placeholder="Usuario" required>   
+				<input id="pass" type="password" name="Password" placeholder="Pass" required>
+				<input type="submit" id="submit" value="Login">
+				<label><input type="checkbox">Recuerdame</label>
+			    </form>
+                            <a href="formulario.html" class="product" target="fill"><s4>Registrarse</s4></a>
+			</div>                
+		</nav>
+                <input id="search" type="text" name="search" placeholder="Buscar...." class="inSesT" required>
+            </div>
+        </div>
+        <div class="cuerpo1">
+            <iframe src="statement.jsp" name="fill"></iframe>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link rel="stylesheet" href="css/divs.css" type="text/css">
+        <link rel="stylesheet" href="css/letras.css" type="text/css">
+        <link rel="stylesheet" href="css/imagExtras.css" type="text/css">
+                <script>
+            //Función para validar números
+            function valnum(evento)
+            {
+                var numeros = "1234567890";
+                var valor = evento.which || evento.KeyCode;
+                var numero = String.fromCharCode(valor);
+                var num = numeros.indexOf(numero);
+                
+                if(num === -1)
+                {                
+                    alert("Por favor, ingresa solo números");
+                    return false;
+                }    
+                else{                
+                    return true;
+                }
+            }
+            function valtext(evento)
+            {
+                var letras = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ ";
+
+                var valor = evento.which || evento.keyCodde;
+                var txt = String.fromCharCode(valor);
+
+                var pos = letras.indexOf(txt);
+                if (pos === -1)
+                {
+                    alert('Por favor, ingresa solo texto');
+                    return false;
+                } else
+                    return true;
+            }
+        </script>
+    </head>
+    <body>        
+        <br>
+            <div class="cuerpo1">
+                <div class="lef">
+                    
+                </div>
+                <div class="rig">
+                <form method="post" action="desplegar.jsp" name="formulario">
+                    <br>
+                    <input id="contrasenia" type="text" name="nom" placeholder="Nombre" class="forms" onkeypress="return valtext(event)" required>
+                    <label ><s2> Escribe tu nombre: </s2></label>
+                    <br>
+                    <label ><s2> Escribe tu contraseña: </s2></label>
+                    <input id="Nombre" type="text" name="pass" placeholder="Contrase&ntilde;a" class="forms" required>
+                    <br>
+                    <label><s2> Escribe tu edad: </s2></label>
+                    <input id="Edad" type="text" name="edad" placeholder="Solo Numeros" class="forms" onkeypress="return valnum (event)" required>
+                    <br>
+                    <label ><s2> Escribe tu correo: </s2></label>
+                    <input id="Puesto" type="email" name="email" placeholder="ej: example&#64;gmail.com" class="forms" required>
+                    <br>
+                    <input type="image" src="img/buttons/botReg.png" alt="Iniciar Sesion" class="botn">
+                
+                </form>
+                </div>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,145 @@
+.imgLogo {
+    height: 100%;  
+}
+.botn {
+    width: 35%;  
+}
+.autoad{
+    max-width: 100%;
+    width: auto;
+}
+.botInSes{
+    position: absolute;
+    right: 0;
+    top: 30%;
+    min-height: 10px;
+    max-height: 50px;
+    height: 45%;
+    background: transparent;
+}
+.botReg{
+    min-height: 50px;
+    max-height: 100px;
+    height: 20%;
+    background: transparent;
+}
+.imagg{
+    max-width: 50%;
+    width: auto;    
+}
+.inSesT{
+    border-bottom-right-radius: 8px; 
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px; 
+    border-top-left-radius: 8px;    
+    font-family: "Berlin Sans FB";
+    font-size: 2vh; 
+    color:#B2B2B2;
+    background-color: #ffffff;
+    width: auto;
+    height: 35%;
+    width: 45%;
+    left: 15px;
+    position: absolute;
+}
+.forms{
+    border-bottom-right-radius: 8px; 
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px; 
+    border-top-left-radius: 8px;    
+    font-family: "Berlin Sans FB";
+    font-size: 3vh; 
+    color:#B2B2B2;
+    width: auto;
+}
+
+.product{
+    border: 0;
+    background: transparent;
+    font-family: "Harrington";
+    font-size: 3vh; 
+    color:#0049BD;
+    width: 10%;
+    font-weight: bolder;
+}
+.backSoul{
+    background-color: #000000;
+    border: 7px #040898 double;
+    border-radius: 15px 15px 15px 15px;
+}
+.inpForm{
+    border-bottom-right-radius: 8px; 
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px; 
+    border-top-left-radius: 8px;    
+    font-family: "Berlin Sans FB";
+    font-size: 3vh; 
+    color:#B2B2B2;
+    background-color: #ffffff;
+    width: auto;
+}
+
+nav.acceder #login{
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    font-size: 3vh;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    background: #111111;
+    border: 5px #ffffff double;
+    border-radius: 10px 10px 10px 10px;
+}
+nav.acceder #login-content {
+    position: absolute;
+    top: 75%;
+    right: 0;
+    z-index: 999;    
+    background: #000000;
+    padding: 15px;
+    border-radius: 10px 10px 10px 10px;
+    width: 250px; 
+    display: none;
+}
+
+input#user, input#pass {
+    border-bottom-right-radius: 8px; 
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px; 
+    border-top-left-radius: 8px;    
+    font-family: "Berlin Sans FB";
+    font-size: 2.5vh; 
+    color:#ffffff;
+    width: 240px;
+    margin-bottom: 10px;
+    background: #111111;
+}
+#submit {    
+    background-color: #DD0000;
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+    border: 1px solid #044E6B;
+    float: left;
+    height: 28px;
+    padding: 0;
+    width: 100px;
+    cursor: pointer;
+    font: bold 14px Arial;
+    color: #fff;
+    border-radius: 10px 10px 10px 10px;
+}
+#submit:hover {    
+    background-color: #990000;
+} 
+
+label {
+    float: right;
+    line-height: 28px;
+    font-size: 14px;
+    color: #666;
+}
+
+.temp{
+    height: 100%;
+}
