@@ -130,7 +130,7 @@ iframe{
     height: 99.5%;
     border: 0;
 }
-.lef{
+.left{
     position: absolute;
     float: left;
     left: 0;
@@ -143,8 +143,8 @@ iframe{
     align-items: center;
     text-align: center;
 }
-.rig{
-    position: absolute;
+.right{
+    position: relative;
     float: right;
     right: 0;
     width: 50%;

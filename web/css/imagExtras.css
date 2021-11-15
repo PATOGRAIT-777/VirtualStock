@@ -134,7 +134,6 @@ input#user, input#pass {
 } 
 
 label {
-    float: right;
     line-height: 28px;
     font-size: 14px;
     color: #666;
