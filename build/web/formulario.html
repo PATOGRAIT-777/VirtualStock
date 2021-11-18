@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <link rel="stylesheet" href="css/divs.css" type="text/css">
-E        <link rel="stylesheet" href="css/letras.css" type="text/css">
+        <link rel="stylesheet" href="css/letras.css" type="text/css">
         <link rel="stylesheet" href="css/imagExtras.css" type="text/css">
                 <script>
             //Función para validar números
@@ -50,26 +45,34 @@ E        <link rel="stylesheet" href="css/letras.css" type="text/css">
         <br>
             <div class="cuerpo1">
                 <div class="left">
-                    
-                </div>
-                <div class="right">
                 <form method="post" action="desplegar.jsp" name="formulario">
                     <br>
-                    <label ><s2> Escribe tu nombre: </s2></label>
-                    <input id="contrasenia" type="text" name="nom" placeholder="Nombre" class="forms" onkeypress="return valtext(event)" required>
+                    
+                    <input id="UsrName" type="text" name="usr" placeholder="Usuario" class="forms" onkeypress="return valtext(event)" required>
                     <br>
-                    <label ><s2> Escribe tu contraseña: </s2></label>
-                    <input id="Nombre" type="text" name="pass" placeholder="Contrase&ntilde;a" class="forms" required>
+                    <input id="Nombre" type="text" name="nom" placeholder="Nombre" class="forms" required>
                     <br>
-                    <label><s2> Escribe tu edad: </s2></label>
-                    <input id="Edad" type="text" name="edad" placeholder="Solo Numeros" class="forms" onkeypress="return valnum (event)" required>
+                    <input id="Contrasena" type="text" name="usr" placeholder="contrase&ntilde;a" class="forms" onkeypress="return valtext(event)" required>
                     <br>
-                    <label ><s2> Escribe tu correo: </s2></label>
-                    <input id="Puesto" type="email" name="email" placeholder="ej: example&#64;gmail.com" class="forms" required>
+                    <input id="LastName" type="text" name="lsnom" placeholder="Apellidos" class="forms" required>
                     <br>
-                    <input type="image" src="img/buttons/botReg.png" alt="Iniciar Sesion" class="botn">
-               
+                    <input id="Edad" type="text" name="email" placeholder="correo&#64;servidor.com" class="forms" onkeypress="return valnum (event)" required>
+                    <br>
+                    <input id="Edad" type="email" name="age" placeholder="Edad" class="forms" required>
+                    <br>
+                    <input id="Puesto" type= "email" name= "tel" placeholder="Telefono" class="forms" required>
+                    <br>
+                    <input type="image" src= "img/buttons/botReg.png" alt="Iniciar Sesion" class="botn">
                 </form>
+                </div>
+                <div class="right">
+                    <form method="post" action="desplegar.jsp" name="formulario">
+                        <input id="UsrName" type="text" name="usr" placeholder="Usuario" class="forms" onkeypress="return valtext(event)" required>
+                        <br>
+                        <input id="Contrasena" type="text" name="usr" placeholder="contrase&ntilde;a" class="forms" onkeypress="return valtext(event)" required>
+                        <br>
+                        <input type="image" src= "img/buttons/botInSes.png" alt="Iniciar Sesion" class="botn">
+                    </form>
                 </div>
             </div>
     </body>
