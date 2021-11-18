@@ -21,8 +21,8 @@ public class base {
     
     public base(){
         this.usrBD = "root";
-        this.passBD = "==PATOGRAIT777==";  
-        this.urlBD = "jdbc:mysql://127.0.0.1:3306/bosquejo1?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC";///?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
+        this.passBD = "n0m3l0";  
+        this.urlBD = "jdbc:mysql://127.0.0.1:3306/VirtualStock?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC";///?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
         this.driverClassName = "com.mysql.jdbc.Driver";
 
     }

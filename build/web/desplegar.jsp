@@ -15,12 +15,15 @@
     </head>
     <body><s2>
         <%
-            String desnom=request.getParameter("nom");
-            String despass=request.getParameter("pass");
-            String desedad=request.getParameter("edad");
-            String desemail=request.getParameter("email");
+            String UsrName=request.getParameter("usr");
+            String Nombre=request.getParameter("nom");
+            String Pass=request.getParameter("pass");
+            String apellido=request.getParameter("lsnom");
+            String email=request.getParameter("email");
+            String Edad=request.getParameter("age");
+            String Telf=request.getParameter("tel");
             
-            if(!desnom.equals("") && !despass.equals("")&& !desedad.equals("")&& !desemail.equals("")){
+            if(!UsrName.equals("") && !Nombre.equals("")&& !Pass.equals("")&& !apellido.equals("")&& !email.equals("")&& !Edad.equals("")&& !Telf.equals("")){
             
             base bd = new base();
             
@@ -28,7 +31,7 @@
             
                 bd.conectar();
                 
-                String strQry = "insert into Registro(nombre, pass, edad, correo) values ('"+desnom+"','"+despass+"','"+desedad+"', '"+desemail+"');";
+                String strQry = "insert into Users(usr_name, cliente_nombre, cliente_lastname, edad, email, pass, telefono) values ('"+UsrName+"', '"+Nombre+"','"+apellido+"', "+Edad+", '"+email+"','"+Pass+"' ,'"+Telf+"');";
                 
                 int resultadoInsert = bd.insertar(strQry);
                 
@@ -45,13 +48,13 @@
             
         %></s2><br>
         
-        <s2><label>Nombre: <%out.println(desnom);%></label></s2><br>
+        <s2><label>Nombre: <%out.println(Nombre);%></label></s2><br>
         
-        <s2><label>Contraseña: <%out.println(despass);%></label></s2><br>
+        <s2><label>Contraseña: <%out.println(Pass);%></label></s2><br>
        
-        <s2><label> Edad: <%out.println(desedad);%></label></s2><br>
+        <s2><label> Edad: <%out.println(Edad);%></label></s2><br>
         
-        <s2><label> Email: <%out.println(desemail);%></label></s2><br>
+        <s2><label> Email: <%out.println(email);%></label></s2><br>
            
     </body>
 

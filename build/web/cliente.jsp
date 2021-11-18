@@ -43,7 +43,7 @@
     </head>
     <body>
         <div class="cuerpo4">
-            <p><s3>Bienvenido <%=nombre%> sos CLIENTE</s3></p><br><br>
+            <p><s3>Bienvenido <%=nombre%> eres CLIENTE</s3></p><br><br>
             <p><img class="imagg" src="img/gifs/saly.gif" alt="regalo"><br><br></p>
             <p><s1>Lista de deseados</s1><br>
             <s5>Por el momento se encuentra vacia</s5><br><br></p>
