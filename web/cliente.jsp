@@ -1,36 +1,22 @@
-<%-- 
-    Document   : newjsp
-    Created on : 4/08/2021, 03:41:32 PM
-    Author     : patog
---%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="conexion.base"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" session="true"%>
 
 <%
-
     HttpSession miSessiondelUsuario = (HttpSession) request.getSession();
-
     int idpersona = (Integer) (miSessiondelUsuario.getAttribute("idPerI") == null ? 0 : miSessiondelUsuario.getAttribute("idPerI"));
-
     if (idpersona<1){
         response.sendRedirect("iniciose.jsp");
     }
-
     String nombre="";
     base bd = new base();
     bd.conectar();
-    String strQry = "Select * from Registro where id = '"+idpersona+"'";
+    String strQry = "Select * from Users where id_cliente = '"+idpersona+"'";
     ResultSet rsDatosPer = bd.consulta(strQry);
-
-    if(rsDatosPer.next()){
-
+    if(rsDatosPer.next())
         nombre = rsDatosPer.getString(2);
-    }
-
 %>
 <!DOCTYPE html>
-
 <html>
     <head>
     <meta charset="UTF-8">

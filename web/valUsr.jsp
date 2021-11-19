@@ -1,8 +1,4 @@
-<%-- 
-    Document   : newjsp
-    Created on : 4/08/2021, 03:41:32 PM
-    Author     : patog
---%>
+
 <%@page import="conexion.base"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" session="true"%>
@@ -14,11 +10,9 @@
     if(pswd == null)
         pswd ="0";
     else{
-        if (pswd.equals("")) {
+        if (pswd.equals(""))
             pswd = "0";
-         }
     }
-
     if(!usr.equals("0") && !pswd.equals("0")) {
         base bd = new base();
         bd.conectar();
@@ -26,10 +20,10 @@
         ResultSet rsValidarUsr = bd.consulta (strQry);
         if (rsValidarUsr.next()){
             HttpSession miSessiondelUsuario = (HttpSession) request.getSession();
-            int idPersona = rsValidarUsr.getInt("id"); //valores de la base de datos
-            String usuario = rsValidarUsr.getString("nombre");
+            int idPersona = rsValidarUsr.getInt("id_cliente"); //valores de la base de datos
+            String usuario = rsValidarUsr.getString("usr_name");
             miSessiondelUsuario.setAttribute("idPerI", new Integer(idPersona));
-            miSessiondelUsuario.setAttribute("nombreUsuario", usuario);
+            miSessiondelUsuario.setAttribute("cliente_nombre", usuario);
             response.sendRedirect ("cliente.jsp");
         }
     }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package conexion;
 
 import java.sql.Connection;
@@ -17,14 +12,12 @@ public class base {
     private String urlBD;
     private String driverClassName;
     private Connection conn = null;
-    private Statement estancia;
-    
+    private Statement estancia;   
     public base(){
         this.usrBD = "root";
         this.passBD = "n0m3l0";  
         this.urlBD = "jdbc:mysql://127.0.0.1:3306/VirtualStock?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC";///?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
         this.driverClassName = "com.mysql.jdbc.Driver";
-
     }
 
     public void setUsrBD(String usrBD) {
@@ -51,18 +44,13 @@ public class base {
         this.estancia = estancia;
     }
 
-
-
-
     public void conectar() throws SQLException, ClassNotFoundException {
         try{
             Class.forName(this.driverClassName) .newInstance();
             this.conn = DriverManager.getConnection(this.urlBD, this.usrBD, this.passBD);
-            
         } catch (Exception err) {
             System.out.println("Error "+err.getMessage());
         }
-            
     }
     public void cierraConexion() throws SQLException {
          this.conn.close();
@@ -75,13 +63,12 @@ public class base {
         this.estancia = (Statement) conn.createStatement();
         return this.estancia.executeQuery(consulta);
     }
-        public int borrar(String borra) throws SQLException {
+    public int borrar(String borra) throws SQLException {
         Statement st = (Statement) this.conn.createStatement();
         return st.executeUpdate(borra);
-    
-        }
-        public int edita(String editar) throws SQLException {
+    }
+    public int edita(String editar) throws SQLException {
         Statement st = (Statement) this.conn.createStatement();
         return st.executeUpdate(editar);
-        }
+    }
 }
