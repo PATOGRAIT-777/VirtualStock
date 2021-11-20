@@ -137,8 +137,8 @@ input#registro{
     text-shadow: 0 1px 0 #000000;
     box-shadow: 0 0 1px #002060, 0 1px 0 #002060 inset;    
     border: 1px solid #044E6B;
-    right: 0;
     height: 28px;
+    float: left;
     padding: 0;
     width: 100px;
     cursor: pointer;
