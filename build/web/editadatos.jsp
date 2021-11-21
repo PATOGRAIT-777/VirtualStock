@@ -24,36 +24,41 @@
                         rs = bd.consulta(strQry);
                         while (rs.next()) {
                 %>
-                <tr>
-                    <th><label for="TxtId">Código </label>
-                        <input id="TxtId" type="text" name="TxtId" value="<%=rs.getString(1)%>" readonly="readonly"/>
-                    </th>
-                </tr>
-                <tr>
-                    <th><label for="TxtNombre">Nombre </label>
-                        <input id="TxtNombre" type="text" name="TxtNombre" value="<%=rs.getString(2)%>" />
-                    </th>
-                </tr>
-                <tr>
-                    <th><label for="TxtPaterno">Contraseña </label>
-                        <input id="TxtPaterno" type="text" name="TxtPaterno" value="<%=rs.getString(3)%>" />
-                    </th>
-                </tr>
-                <tr>
-                    <th><label for="TxtMaterno">Edad </label>
-                        <input id="TxtMaterno" type="text" name="TxtMaterno" value="<%=rs.getString(4)%>"/>
-                    </th>
-                </tr>
-                <tr>
-                    <th><label for="TxtEdad">Email </label>
-                        <input id="TxtEdad" type="text" name="TxtEdad" value="<%=rs.getString(5)%>" />
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <input id="BtnEditar" name="BtnEditar" type="submit" value="Actualizar Datos"/>
-                    </th>
-                </tr>
+                    <tr>
+                        <th>
+                            <label for="TxtId">Código</label>
+                            <input id="TxtId" type="text" name="TxtId" value="<%=rs.getString(1)%>" readonly="readonly"/>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="TxtNombre">Nombre</label>
+                            <input id="TxtNombre" type="text" name="TxtNombre" value="<%=rs.getString(2)%>" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="TxtPaterno">Contraseña</label>
+                            <input id="TxtPaterno" type="text" name="TxtPaterno" value="<%=rs.getString(3)%>" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="TxtMaterno">Edad</label>
+                            <input id="TxtMaterno" type="text" name="TxtMaterno" value="<%=rs.getString(4)%>"/>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="TxtEdad">Email</label>
+                            <input id="TxtEdad" type="text" name="TxtEdad" value="<%=rs.getString(5)%>" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input id="BtnEditar" name="BtnEditar" type="submit" value="Actualizar Datos"/>
+                        </th>
+                    </tr>
                 <%
                     }
                         } catch (Exception ex) {
