@@ -40,7 +40,7 @@
         <div class="divsc">
         <s1>Usuario Desconocido</s1><br><br>
         <blockquote><img class="botn" src="img/gifs/maple.gif" alt="regalo"></blockquote><br><br>
-        <blockquote><s3><a href="Ejecutar Este.html">Regresar</a> </s3><br><br></blockquote>
+        <blockquote><s3><a href="formulario.html">Regresar</a> </s3><br><br></blockquote>
         </div>
     </body>
 </html>
