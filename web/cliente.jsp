@@ -31,7 +31,7 @@
             <p><img class="imagg" src="img/gifs/saly.gif" alt="regalo"><br><br></p>
             <p><s1>Lista de deseados</s1><br>
             <s5>Por el momento se encuentra vacia</s5><br><br></p>
-            <p><s2>Desea cerrar sesion precione el boton</s2></p><br><br><br>
+            <p><s2>Desea cerrar sesion presione el boton</s2></p><br><br><br>
             <p><a href="salir.jsp"><input type="button" class="forms" value="Cerrar Sesion"></a></p>
         </div>
     </body>
