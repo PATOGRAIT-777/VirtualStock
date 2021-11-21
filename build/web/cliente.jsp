@@ -1,13 +1,11 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="conexion.base"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" session="true"%>
-
 <%
     HttpSession miSessiondelUsuario = (HttpSession) request.getSession();
     int idpersona = (Integer) (miSessiondelUsuario.getAttribute("idPerI") == null ? 0 : miSessiondelUsuario.getAttribute("idPerI"));
-    if (idpersona<1){
+    if (idpersona<1)
         response.sendRedirect("iniciose.jsp");
-    }
     String nombre="";
     base bd = new base();
     bd.conectar();

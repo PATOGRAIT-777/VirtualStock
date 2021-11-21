@@ -24,9 +24,10 @@
                     int resultadoInsert = bd.insertar(strQry);
                     out.print("checar resultado de la base"+ resultadoInsert);
                     }
-                    catch(Exception XD)
+                    catch(Exception XD){
                         out.print(XD.getMessage());
-            }
+                    }
+                }
         %><br>
         <s2><label>Nombre: <%out.println(Nombre);%></label></s2><br>
         <s2><label>Contraseña: <%out.println(Pass);%></label></s2><br>
