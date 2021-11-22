@@ -162,3 +162,11 @@ iframe{
 .id{
     right:0;
 }
+
+.category{
+    font-family: Amasis MT Pro Black;
+    font-size: 1.5vh;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
