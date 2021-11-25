@@ -4,15 +4,20 @@
 <%
     HttpSession miSessiondelUsuario = (HttpSession) request.getSession();
     int idpersona = (Integer) (miSessiondelUsuario.getAttribute("idPerI") == null ? 0 : miSessiondelUsuario.getAttribute("idPerI"));
-    if (idpersona<1)
-        response.sendRedirect("iniciose.jsp");
-    String nombre="";
-    base bd = new base();
-    bd.conectar();
-    String strQry = "Select * from Users where id_cliente = '"+idpersona+"'";
-    ResultSet rsDatosPer = bd.consulta(strQry);
-    if(rsDatosPer.next())
-        nombre = rsDatosPer.getString(2);
+    int identifier = (Integer)(miSessiondelUsuario.getAttribute("identifier") == null ? 0 : miSessiondelUsuario.getAttribute("identifier"));
+    String nombre = "";
+    if (identifier == 0){
+        if (idpersona<1)
+            response.sendRedirect("formulario.jsp");
+        base bd = new base();
+        bd.conectar();
+        String strQry = "Select * from Users where id_usuario = '"+idpersona+"'";
+        ResultSet rsDatosPer = bd.consulta(strQry);
+        if(rsDatosPer.next())
+            nombre = rsDatosPer.getString(2);
+    }
+    else
+        response.sendRedirect("admin.jsp");
 %>
 <!DOCTYPE html>
 <html>

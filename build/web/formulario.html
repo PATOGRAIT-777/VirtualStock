@@ -45,29 +45,35 @@
         <br>
         <div class="cuerpo1">
             <div class="left">
-            <form method="post" action="desplegar.jsp" name="formulario">
-                <input id="UsrName" type="text" name="usr" placeholder="Usuario" class="forms" onkeypress="return valtext(event)" required>
-                <br>
-                <input id="Nombre" type="text" name="nom" placeholder="Nombre" class="forms" required>
-                <br>
-                <input id="Contrasena" type="text" name="pass" placeholder="contrase&ntilde;a" class="forms" required>
-                <br>
-                <input id="LastName" type="text" name="lsnom" placeholder="Apellidos" class="forms" required>
-                <br>
-                <input id="Email" type="email" name="email" placeholder="correo&#64;servidor.com" class="forms" required>
-                <br>
-                <input id="Edad" type="text" name="age" placeholder="Edad" class="forms" required>
-                <br>
-                <input id="Telefono" type= "text" name= "tel" placeholder="Telefono" class="forms" required>
-                <br>
-                <input type="image" src= "img/buttons/botReg.png" alt="Iniciar Sesion" class="botn">
-            </form>
+                <p align="center"><s2>Registrate</s2></p>
+                <form method="post" action="desplegar.jsp" name="formulario" >
+                    <select id="Identificador" name="Identifier" required>
+                        <option value="0">Administrador</option>
+                        <option value="1">Cliente</option>
+                    </select><br>
+                    <input id="UsrName" type="text" name="usr" placeholder="Usuario" class="forms" onkeypress="return valtext(event)" required>
+                    <br>
+                    <input id="Nombre" type="text" name="nom" placeholder="Nombre" class="forms" required>
+                    <br>
+                    <input id="Contrasena" type="text" name="pass" placeholder="contrase&ntilde;a" class="forms" required>
+                    <br>
+                    <input id="LastName" type="text" name="lsnom" placeholder="Apellidos" class="forms" required>
+                    <br>
+                    <input id="Email" type="email" name="email" placeholder="correo&#64;servidor.com" class="forms" required>
+                    <br>
+                    <input id="Edad" type="text" name="age" placeholder="Edad" class="forms" required>
+                    <br>
+                    <input id="Telefono" type= "text" name= "tel" placeholder="Telefono" class="forms" required>
+                    <br>
+                    <input type="image" src= "img/buttons/botReg.png" alt="Iniciar Sesion" class="botn">
+                </form>
             </div>
             <div class="right">
+                <p align=" center"><s2>Inicia Sesión</s2>
                 <form method="post" action="valUsr.jsp" name="formulario">
                     <input id="UsrName" type="text" name="usr" placeholder="Usuario" class="forms" required>
                     <br>
-                    <input id="Contrasena" type="text" name="pass" placeholder="contrase&ntilde;a" class="forms" required>
+                    <input id="Contrasena" type="password" name="pass" placeholder="contrase&ntilde;a" class="forms" required>
                     <br>
                     <input type="image" src= "img/buttons/botInSes.png" alt="Iniciar Sesion" class="botn">
                 </form>

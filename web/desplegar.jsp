@@ -1,4 +1,6 @@
 <%@page import="conexion.base"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="Verificador.VerifcadorEmail"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -9,29 +11,40 @@
     </head>
     <body><s2>
         <%
+            VerifcadorEmail  VE= new VerifcadorEmail();
+            String verificador = VE.verificador1();
             String UsrName=request.getParameter("usr");
             String Nombre=request.getParameter("nom");
             String Pass=request.getParameter("pass");
             String apellido=request.getParameter("lsnom");
-            String email=request.getParameter("email");
+            String emailUsr=request.getParameter("email");
             String Edad=request.getParameter("age");
             String Telf=request.getParameter("tel");
-            if(!UsrName.equals("") && !Nombre.equals("")&& !Pass.equals("")&& !apellido.equals("")&& !email.equals("")&& !Edad.equals("")&& !Telf.equals("")){
+            String Identifier = request.getParameter("Identifier");
+            if(!UsrName.equals("") && !Nombre.equals("")&& !Pass.equals("")&& !apellido.equals("")&& !emailUsr.equals("")&& !Edad.equals("")&& !Telf.equals("")&& !Identifier.equals("")){
                 base bd = new base();
                 try{
                     bd.conectar();
-                    String strQry = "insert into Users(usr_name, cliente_nombre, cliente_lastname, edad, email, pass, telefono) values ('"+UsrName+"', '"+Nombre+"','"+apellido+"', "+Edad+", '"+email+"','"+Pass+"' ,'"+Telf+"');";
+                    String emailVry= "select * from Users where email = 'emailUsr'";
+                    ResultSet emailVerifier = bd.consulta(emailVry);
+                    if(emailVerifier.next())
+                        response.sendRedirect("Resgistro Fallido.jsp");
+                    String strQry = "insert into Users(usr_name, usuario_nombre, usuario_lastname, edad, email, pass, telefono, identificador)"
+                            + " values ('"+UsrName+"', '"+Nombre+"','"+apellido+"', "+Edad+", '"+emailUsr+"','"+Pass+"' ,'"+Telf+"', '"+Identifier+"');";
                     int resultadoInsert = bd.insertar(strQry);
-                    out.print("checar resultado de la base"+ resultadoInsert);
+                    if(resultadoInsert==1)
+                        out.print(verificador);
                     }
                     catch(Exception XD){
                         out.print(XD.getMessage());
                     }
                 }
-        %><br>
+            
+        %>
+        </s2><br>
         <s2><label>Nombre: <%out.println(Nombre);%></label></s2><br>
         <s2><label>Contraseña: <%out.println(Pass);%></label></s2><br>
         <s2><label> Edad: <%out.println(Edad);%></label></s2><br>
-        <s2><label> Email: <%out.println(email);%></label></s2><br>
+        <s2><label> Email: <%out.println(emailUsr);%></label></s2><br>
     </body>
 </html>

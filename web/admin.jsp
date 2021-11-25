@@ -4,20 +4,15 @@
 <%
     HttpSession miSessiondelUsuario = (HttpSession) request.getSession();
     int idpersona = (Integer) (miSessiondelUsuario.getAttribute("idPerI") == null ? 0 : miSessiondelUsuario.getAttribute("idPerI"));
-    int identifier = (Integer)(miSessiondelUsuario.getAttribute("identifier") == null ? 0 : miSessiondelUsuario.getAttribute("identifier"));
-    String nombre = "";
-    if (identifier == 0){
-        if (idpersona<1)
-            response.sendRedirect("formulario.jsp");
-        base bd = new base();
-        bd.conectar();
-        String strQry = "Select * from Users where id_usuario = '"+idpersona+"'";
-        ResultSet rsDatosPer = bd.consulta(strQry);
-        if(rsDatosPer.next())
-            nombre = rsDatosPer.getString(2);
-    }
-    else
-        response.sendRedirect("admin.jsp");
+    if (idpersona<1)
+        response.sendRedirect("formulario.jsp");
+    String nombre="";
+    base bd = new base();
+    bd.conectar();
+    String strQry = "Select * from Users where id_cliente = '"+idpersona+"'";
+    ResultSet rsDatosPer = bd.consulta(strQry);
+    if(rsDatosPer.next())
+        nombre = rsDatosPer.getString(2);
 %>
 <!DOCTYPE html>
 <html>
@@ -32,7 +27,7 @@
     </head>
     <body>
         <div class="cuerpo4">
-            <p><s3>Bienvenido <%=nombre%> eres CLIENTE</s3></p><br><br>
+            <p><s3>Bienvenido <%=nombre%> eres Administrador</s3></p><br><br>
             <p><img class="imagg" src="img/gifs/saly.gif" alt="regalo"><br><br></p>
             <p><s1>Lista de deseados</s1><br>
             <s5>Por el momento se encuentra vacia</s5><br><br></p>

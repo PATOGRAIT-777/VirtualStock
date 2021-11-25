@@ -19,10 +19,10 @@
         ResultSet rsValidarUsr = bd.consulta (strQry);
         if (rsValidarUsr.next()){
             HttpSession miSessiondelUsuario = (HttpSession) request.getSession();
-            int idPersona = rsValidarUsr.getInt("id_cliente"); //valores de la base de datos
+            int idPersona = rsValidarUsr.getInt("id_usuario"); //valores de la base de datos
             String usuario = rsValidarUsr.getString("usr_name");
             miSessiondelUsuario.setAttribute("idPerI", new Integer(idPersona));
-            miSessiondelUsuario.setAttribute("cliente_nombre", usuario);
+            miSessiondelUsuario.setAttribute("usuario_nombre", usuario);
             response.sendRedirect ("cliente.jsp");
         }
     }
