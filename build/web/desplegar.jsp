@@ -29,18 +29,19 @@
                     String emailVry= "select * from Users where email = '"+emailUsr+"' ";
                     ResultSet emailVerifier = bd.consulta(emailVry);
                     if(emailVerifier.next())
-                        response.sendRedirect("Resgistro Fallido.jsp");
-                    String strQry = "insert into Users(usr_name, usuario_nombre, usuario_lastname, edad, email, pass, telefono, identificador, activacion, verificador)"
-                            + " values ('"+UsrName+"', '"+Nombre+"','"+apellido+"', "+Edad+", '"+emailUsr+"','"+Pass+"','"+Telf+"', '"+Identifier+"', "+activate+", '"+verificador+"');";
-                    int resultadoInsert = bd.insertar(strQry);
-                    if(resultadoInsert==1)
-                        out.print(verificador);
+                        response.sendRedirect("Registro Fallido.jsp");
+                    else{
+                        String strQry = "insert into Users(usr_name, usuario_nombre, usuario_lastname, edad, email, pass, telefono, identificador, activacion, verificador)"
+                                + " values ('"+UsrName+"', '"+Nombre+"','"+apellido+"', "+Edad+", '"+emailUsr+"','"+Pass+"','"+Telf+"', '"+Identifier+"', "+activate+", '"+verificador+"');";
+                        int resultadoInsert = bd.insertar(strQry);
+                        if(resultadoInsert==1)
+                            out.print(verificador);
+                        }
                     }
                     catch(Exception XD){
                         out.print(XD.getMessage());
                     }
                 }
-            
         %>
         </s2><br>
         <s2><label>Nombre: <%out.println(Nombre);%></label></s2><br>
