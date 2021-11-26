@@ -12,7 +12,7 @@
     <body><s2>
         <%
             VerifcadorEmail  VE= new VerifcadorEmail();
-            String verificador = VE.verificador1();
+            String verificador = VE.Vry();
             String UsrName=request.getParameter("usr");
             String Nombre=request.getParameter("nom");
             String Pass=request.getParameter("pass");
@@ -20,17 +20,18 @@
             String emailUsr=request.getParameter("email");
             String Edad=request.getParameter("age");
             String Telf=request.getParameter("tel");
+            int activate = 0;
             String Identifier = request.getParameter("Identifier");
-            if(!UsrName.equals("") && !Nombre.equals("")&& !Pass.equals("")&& !apellido.equals("")&& !emailUsr.equals("")&& !Edad.equals("")&& !Telf.equals("")&& !Identifier.equals("")){
+            if(!UsrName.equals("") && !Nombre.equals("")&& !Pass.equals("")&& !apellido.equals("")&& !emailUsr.equals("")&& !Edad.equals("")&& !Telf.equals("")&& !Identifier.equals("") && !verificador.equals("")){
                 base bd = new base();
                 try{
                     bd.conectar();
-                    String emailVry= "select * from Users where email = 'emailUsr'";
+                    String emailVry= "select * from Users where email = '"+emailUsr+"' ";
                     ResultSet emailVerifier = bd.consulta(emailVry);
                     if(emailVerifier.next())
                         response.sendRedirect("Resgistro Fallido.jsp");
-                    String strQry = "insert into Users(usr_name, usuario_nombre, usuario_lastname, edad, email, pass, telefono, identificador)"
-                            + " values ('"+UsrName+"', '"+Nombre+"','"+apellido+"', "+Edad+", '"+emailUsr+"','"+Pass+"' ,'"+Telf+"', '"+Identifier+"');";
+                    String strQry = "insert into Users(usr_name, usuario_nombre, usuario_lastname, edad, email, pass, telefono, identificador, activacion, verificador)"
+                            + " values ('"+UsrName+"', '"+Nombre+"','"+apellido+"', "+Edad+", '"+emailUsr+"','"+Pass+"','"+Telf+"', '"+Identifier+"', "+activate+", '"+verificador+"');";
                     int resultadoInsert = bd.insertar(strQry);
                     if(resultadoInsert==1)
                         out.print(verificador);

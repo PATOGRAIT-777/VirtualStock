@@ -1,6 +1,10 @@
 package Verificador;
 public class VerifcadorEmail {
-    public String verificador1(){
+    public String Vry (){
+        String VrySeg = verificador1();
+        return VrySeg;
+    }
+    private String verificador1(){
         int key[] = new int [6], keyPart;
         String keyComp = "";
         boolean keyVry = false;
