@@ -18,6 +18,21 @@
     height: 43px;
 }
 
+.serch{
+    position: absolute;
+    border-bottom-right-radius: 8px; 
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px; 
+    border-top-left-radius: 8px;    
+    font-family: "Berlin Sans FB";
+    font-size: 53px; 
+    color:#B2B2B2;
+    border-color: #595959;
+    width: auto;
+    top: 23px;
+    left: 50.8%;
+    visibility: visible;
+}
 
 nav.acceder #login{
     position: absolute;
