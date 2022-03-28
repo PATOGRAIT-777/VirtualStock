@@ -3,7 +3,7 @@ body{margin:0}
     position: absolute;
     float: top; 
     width: 100%; 
-    height: 10%; 
+    height: 108px; 
     left: 0;
     right: 0;
     top: 0;
@@ -35,92 +35,49 @@ body{margin:0}
     align-items: center;
     text-align: center;
 }
-.cuerpo2 {
+.menu {
     position: absolute;
     padding: 0px;
     float: top; 
-    width: 12%; 
-    height: 90%;     
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #040898;
+    width: 121px; 
+    height: 52px;
+    left: 1.5%;
+    top: 25px;
+    background-color: transparent;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.shopName {
+    position: absolute;
+    padding: 0px; 
+    width: auto; 
+    height: 50px;
+    left: 15.76%;
+    top: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;    
     justify-content: flex-start;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    background-color: transparent;
 }
-.cuerpo3 {
+
+
+
+.config{
+    height: 43px;
+    width: 43px;
     position: absolute;
-    padding: 0px;
-    float: right; 
-    width: 88%; 
-    height: 90%;     
-    bottom: 0;
     right: 0;
-    background-color: #851717;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;    
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    top: 0;
 }
-.cuerpo4 {
-    position: absolute;
-    padding: 0px;
-    float: top; 
-    width: 100%; 
-    height: 100%;     
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #1F1F1F;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;    
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.zona {
-    position: absolute;    
-    float: left; 
-    right: 25%;
-    width: auto;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;    
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.inSes {
-    position: inherit;
-    float: right; 
-    right: 0;
-    width: 25%;
-    height: 100%;
-    line-height: 50%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;    
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: transparent;
-}
-.divsc{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;    
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+
+
 form{
     width: 80%;
     text-align: center;
@@ -133,40 +90,8 @@ iframe{
     height: 99.5%;
     border: 0;
 }
-.left{
-    position: absolute;
-    float: left;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;    
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.right{
-    position: absolute;
-    float: right;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;    
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.id{
-    right:0;
-}
 
-.category{
-    font-family: Amasis MT Pro Black;
-    font-size: 1.5vh;
-    color: #ffffff;
-    text-align: center;
-    font-weight: bold;
-}
+//*Sub divisiones
+
+
+

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,15 +7,7 @@
         <link rel="stylesheet" href="css/divs.css" type="text/css">
         <link rel="stylesheet" href="css/letras.css" type="text/css">
         <link rel="stylesheet" href="css/imgExtras.css" type="text/css">
-        <script language="JavaScript" type="text/JavaScript">
-            function MM_jumpMenu(targ,selObj,restore){ //v3.0
-              eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
-              if (restore) selObj.selectedIndex=0;
-            }
-            function abrir_popup(pagina) {
-                    top.fill.location.href = pagina
-            }
-        </script>
+        <script language="JavaScript" type="text/JavaScript"></script>
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script>
             $(function(){
@@ -28,63 +19,32 @@
 	</script>
     </head>
     <body>
+        
         <div class="encabezado">
-            &nbsp;&nbsp;&nbsp;
-            <div class="category">
-            <img src="img/buttons/catego.png" width="60" height="23" alt="categorias">
-            <br>
-            CATEGORIAS
-            </div>
-            &nbsp;&nbsp;&nbsp;
-            <select class="product" onchange="MM_jumpMenu('parent.fill',this,0)">
-                <option class="backSoul">Comida</option> 
-                <option class="backSoul">Frutas y Verduras</option> 
-                <option class="backSoul">Lacteos</option> 
-                <option class="backSoul">Harinas</option> 
-                <option class="backSoul">Alimentos Preparados</option> 
-                <option class="backSoul">Carnes y Embutidos</option> 
-                <option class="backSoul">Enlatados</option>
-                <option class="backSoul">Otros</option>
-            </select>
-            <select class="product" onchange="MM_jumpMenu('parent.fill',this,0)">
-                <option class="backSoul">Lacteos</option> 
-                <option class="backSoul">Refrescos</option> 
-                <option class="backSoul">Bebidas</option>   
-                <option class="backSoul">Bebidas Alcoholicas</option> 
-                <option class="backSoul">Otros</option>
-            </select>
-            <select class="product" onchange="MM_jumpMenu('parent.fill',this,0)">
-                <option class="backSoul">Automedicacion</option> 
-                <option class="backSoul">Higiene</option> 
-                <option class="backSoul">Uso Domestico</option> 
-                <option class="backSoul">Jarceria</option> 
-                <option class="backSoul">Productos de Limpieza</option> 
-                <option class="backSoul">Otros</option> 
-            </select>
-            <!-- <img class="temp" src="img/buttons/logoDTienda.png" alt="regalo">&nbsp;&nbsp;&nbsp; -->
-            <a href="formulario.html" class="product" target="fill">Registro</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="statement.jsp" class="product" target="fill">test</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <div class="inSes">
+            
+            <a href="" target=""><div class="menu"><img src="img/buttons/menuBar.png" width="60" height="23" alt="categorias"><m1>CATEGORIAS</m1> </div></a>
+            
+            <a href="" target=""><div class="shopName"><n1>MISCELANEA GAYOSSO</n1> </div></a>
+            
                 <nav class="acceder">
                     <a id="login" href="#">&nbsp;&nbsp;Acceder&nbsp;&nbsp;</a>
                     <div id="login-content">
                         <form action="valUsr.jsp" method="POST" name="inSes">
-                            <input id="user" type="text" name="usr" placeholder="Usuario" required>   
+                            <input id="user" type="text" name="usr" placeholder="Usuario" required>
                             <input id="pass" type="password" name="pass" placeholder="Password" required>
-                            <input type="submit" id="submit" value="Login">&nbsp;&nbsp;
+                            <input type="submit" id="submit" value="Login">
                             <a href="formulario.html" target="fill"><input type="button" id="registro" value="Registrarse"></a>
                         </form>
-                    </div>                
+                    </div>             
 		</nav>
-                <input id="search" type="text" name="search" placeholder="Buscar...." class="inSesT" required>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="carrito"><img src="img/buttons/carrito.png" alt="carrito" width="70" height="43"></a>   
-                &nbsp;
-                <img src="img/buttons/config.png" alt="configuracion" width="43" height="43">   
-            </div>          
+            
+            <a href="carrito"><img src="img/buttons/carrito.png" alt="carrito" class="carrito"></a>
+            
         </div>
-        <div class="cuerpo1">
-            <iframe src="statement.jsp" name="fill"></iframe>
+        
+        <div class="cuerpo1"><iframe src="statement.jsp" name="main"></iframe>
+            
         </div>
+        <div class="config"><img src="img/buttons/config.png" alt="config" width="43px"></div>      
     </body>
 </html>

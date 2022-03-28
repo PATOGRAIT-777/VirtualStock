@@ -33,8 +33,9 @@ nav.acceder #login{
     left: 81.14%;
 }
 nav.acceder #login-content {
+    z-index: 999;
     position: absolute;
-    top: 100%;
+    top: 90%;
     right: 15px; 
     background: #000000;
     padding: 15px;
