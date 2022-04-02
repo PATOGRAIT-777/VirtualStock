@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/Principal.css">
+        <title>JSP Page</title>
+    </head>
+    <body>
+    <s1>Agregar nuevos productos</s1><br>
+    <s2>
+        Escribe los datos del nuevo producto
+    </s2>
+    <br><br>
+    <form method="post" action="agregar.jsp" name="formulario" >
+                    <input id="nombre" type="text" name="nombre" placeholder="Nombre del producto" class="forms" required>
+                    <br>
+                    <br>
+                    <s1>Tipo de producto</s1>
+                    <br>
+                    <select name = "tipo" id="tipo">
+                        <option value = "vinos">Vinos, licores y cerveza</option>
+                        <option value = "lacteos">Lacteos y cremeria</option>
+                        <option value = "higiene">Higiene personal y belleza</option>
+                        <option value = "mascotas">Mascotas y limpieza</option>
+                        <option value = "bebidas">Bebidas y jugos</option>
+                        <option value = "salchichoneria">Salchichoneria</option>
+                        <option value = "farmacia">Farmacia</option>
+                        <option value = "congelados">Congelados</option>
+                        <option value = "frutas">Frutas y verduras</option>
+                        <option value = "panaderia">Panaderia</option>
+                        <option value = "botanas">Botanas</option>
+                        <option value = "dulces">Dulces</option>
+                    </select>
+                    <br>
+                    <br>
+                    <input id="precioC" type="text" name="precioC" placeholder="Precio de compra" class="forms" required>
+                    <br>
+                    <br>
+                    <input id="precioV" type="text" name="precioV" placeholder="Precio de venta" class="forms" required>
+                    <br>
+                    <br>
+                    <input id="marca" type="text" name="marca" placeholder="Marca" class="forms" required>
+                    <br>
+                    <br>
+                    <input id="modelo" type="text" name="modelo" placeholder="Modelo" class="forms" required>
+                    <br>
+                    <br>
+                    <input id="unidades" type="text" name="unidades" placeholder="Unidades disponibles" class="forms" required>
+                    <br>
+                    <br>
+                    <input id="lote" type="text" name="lote" placeholder="Lote" class="forms" required>
+                    <br>
+                    <br>
+                    <s1>Fecha de caducidad por lote</s1>
+                    <br>
+                    <input id="fecha" type="date" name="fecha" class="forms" required>
+                    <br>
+                    <br>
+                    <s1>Imagen del producto</s1>
+                    <br>
+                    <input id="imagen" type="file" name="imagen" class="forms" required>
+                    <br>
+                    <br>
+                    <input type="image" src= "img/buttons/botReg.png" alt="Agregar producto" class="botn">
+                </form>
+    </body>
+</html>
