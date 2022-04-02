@@ -24,7 +24,8 @@
                $(this).toggleClass('active');          
                });
             });
-	</script>
+	    </script>
+        <script src="js/carrusel.js"></script>
     </head>
     <body>
         <h1>Productos</h1>
@@ -37,6 +38,7 @@
             </div>
 
             <img src="img/productos/1.jpg" alt="product" id="product" height="" width="">
+            
         </div>
     </body>
 </html>
