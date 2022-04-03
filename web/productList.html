@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/divs.css" type="text/css">
+        <link rel="stylesheet" href="css/letras.css" type="text/css">
+        <link rel="stylesheet" href="css/imgExtras.css" type="text/css">
+        <link rel="stylesheet" href="css/Desmenu.css" type="text/css">
+        
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            $(function(){
+            $('#login').click(function(){
+               $(this).next('#login-content').slideToggle();
+               $(this).toggleClass('active');          
+               });
+            });
+	</script>
+    <script src="js/desplegable.js"></script>
+    </head>
+    <body>
+        <div>
+            //Inicia barra desplegable de categorias
+
+            <nav class="cat">
+                <ul class="catlis">
+                    <li class="cate_item cate_item--click">    
+                        <div class="cate_button cate_button--click">                        
+                            <a href="#"><img src="img/buttons/menuBar.png" width="60" height="23" alt="categorias"><m1>CATEGORIAS</m1></a>
+                        </div>
+
+                        <ul class="seclis">
+                            //copiar y pegar el numero de secciones requeridas
+                            <li class="cat_secc cate_secc-click">
+                                <div class="cate_button cate_button--click">
+                                    <a href="#" class="cat_link cat_link--inside">Nombre de la sección</a>
+                                </div>
+
+                                <ul class="cat_prod">
+                                    //copiar y pegar el numero de productos requeridos
+                                    <li class="cat_prode">
+                                        <a href="#" class="cat_link cat_link--inside2">Nombre del producto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>                       
+                </ul>
+            </nav>
+            
+            //Acaba barra desplegable de categorias
+            
+        </div>
+    </body>
+</html>
