@@ -1,10 +1,3 @@
-<%-- 
-    Document   : productos
-    Created on : 31 mar 2022, 15:19:30
-    Author     : XNigh
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,7 +18,7 @@
                });
             });
 	    </script>
-        <script>
+        <script language="javascript">
             var images = ['img/temporada/ejemplo1.jpg', 'img/temporada/ejemplo2.jpg', 'img/temporada/ejemplo3.jpg'], cont = 0;
 
             function carrousel(contenedor){
@@ -59,6 +52,24 @@
             carrousel(contenedor);
             });
         </script>
+        //ligar las variables con la base de datos
+        <script>
+            const g = document.querySelector('g');
+            g.onmouseover = logMouseOver;
+            g.onmouseout = logMouseOut;
+
+            function logMouseOver() {
+            g.textContent = 'Agregar al carrito';
+            g.textContent = 'Quedan ' + (contador) + ' productos';
+            }
+
+            function logMouseOut() {
+            g.textContent = 'Precio ' + (precio);	
+            g.textContent = 'Nombre ' + (nombre);
+            g.textContent = 'Marca/Modelo ' + (marca);
+            }
+        </script>
+
     </head>
     <body>
         <h1>Productos</h1>
@@ -70,8 +81,24 @@
                 &#62
             </div>
 
-            <img src="img/productos/1.jpg" alt="product" id="product" height="" width="">
-            
+            <img src="img/productos/1.jpg" alt="product" id="product" height="" width="">           
+        </div>
+
+        <div class="products">
+            //Asigna la unidad replicar depende de la cantidad de productos que se quieran mostrar
+            <div class="productounit">
+                <button class="addcart">               
+                    <img src="img/productos/1.jpg" alt="product" height="" width=""> </img>
+                <g>
+                    //Valores default
+                    <m1>Precio</m1>
+                    <br>
+                    <m2>Nombre</m2>
+                    <br>
+                    <m3>Marca/Modelo</m3>
+                </g>
+                </button>
+            </div>
         </div>
     </body>
 </html>
