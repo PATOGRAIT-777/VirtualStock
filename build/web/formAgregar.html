@@ -1,7 +1,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/Principal.css">
+        <link rel="stylesheet" href="css/divs.css" type="text/css">
+        <link rel="stylesheet" href="css/letras.css" type="text/css">
+        <link rel="stylesheet" href="css/imgExtras.css" type="text/css">
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
         <title>JSP Page</title>
     </head>
     <body>
@@ -14,6 +17,16 @@
                     <input id="nombre" type="text" name="nombre" placeholder="Nombre del producto" class="forms" required>
                     <br>
                     <br>
+
+                    <div class="selectbox"> 
+                        <div class="select" id="select">
+                            <div class="select-content">
+                                Hola wenas noches
+                                <p class="descripcion">Lorem ipsum dolor sit.</p>
+                            </div>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
                     <s1>Tipo de producto</s1>
                     <br>
                     <select name = "tipo" id="tipo">
@@ -30,6 +43,8 @@
                         <option value = "botanas">Botanas</option>
                         <option value = "dulces">Dulces</option>
                     </select>
+                    
+                    
                     <br>
                     <br>
                     <input id="precioC" type="text" name="precioC" placeholder="Precio de compra" class="forms" required>

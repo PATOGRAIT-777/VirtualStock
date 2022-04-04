@@ -4,10 +4,14 @@
     border-top-right-radius: 8px; 
     border-top-left-radius: 8px;    
     font-family: "Berlin Sans FB";
-    font-size: 3vh; 
-    color:#B2B2B2;
-    width: auto;
-    right: 0;
+    font-size: 25px; 
+    color:#ffffff;
+    width: 340px;
+    background: #111111;
+    top: 10px;
+}
+a{
+    text-decoration: none;
 }
 
 .carrito{

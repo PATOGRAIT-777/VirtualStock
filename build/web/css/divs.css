@@ -93,5 +93,20 @@ iframe{
 
 /*Sub divisiones*/
 
+.selectbox{
+    width: 340px;
+    height: 45px;
+    border-bottom-right-radius: 8px; 
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px; 
+    border-top-left-radius: 8px;    
+    font-family: "Berlin Sans FB";
+    font-size: 25px; 
+    color:#ffffff;
+    background: #111111;
+    top: 10px;
+}
 
-
+.select{
+    
+}
